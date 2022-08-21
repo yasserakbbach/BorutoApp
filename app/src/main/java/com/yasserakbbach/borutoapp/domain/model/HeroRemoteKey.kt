@@ -6,6 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "hero_remote_key_table")
 data class HeroRemoteKey(
     @PrimaryKey val id: Int,
-    val prevKey: Int?,
-    val nextKey: Int?,
+    val prevPage: Int?,
+    val nextPage: Int?,
 )
