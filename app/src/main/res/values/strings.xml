@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">BorutoApp</string>
     <string name="app_logo_description">App Logo</string>
+    <string name="first_on_boarding_page_greetings">Greetings</string>
+    <string name="first_on_boarding_page_description">Are you a Boruto fan? Because if you are then we have a great news for you!</string>
+    <string name="second_on_boarding_page_greetings">Explore</string>
+    <string name="second_on_boarding_page_description">Find your favorite heroes and learn some of the things that you didn\'t know about.</string>
+    <string name="third_on_boarding_page_greetings">Power</string>
+    <string name="third_on_boarding_page_description">Check out your hero\'s power and  see how much are they strong comparing to others.</string>
+    <string name="welcome_screen_finish_button">Finish</string>
 </resources>
