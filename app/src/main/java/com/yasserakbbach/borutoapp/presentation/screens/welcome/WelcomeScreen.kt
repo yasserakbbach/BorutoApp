@@ -22,12 +22,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
 import com.google.accompanist.pager.rememberPagerState
 import com.yasserakbbach.borutoapp.R
+import com.yasserakbbach.borutoapp.navigation.Screen
 import com.yasserakbbach.borutoapp.presentation.model.OnBoardingPage
 import com.yasserakbbach.borutoapp.ui.theme.EXTRA_LARGE_PADDING
 import com.yasserakbbach.borutoapp.ui.theme.PAGING_INDICATOR_SPACING
@@ -42,7 +44,10 @@ import com.yasserakbbach.borutoapp.ui.theme.WelcomeScreenTitleColor
 
 @ExperimentalPagerApi
 @Composable
-fun WelcomeScreen(navController: NavHostController) {
+fun WelcomeScreen(
+    navController: NavHostController,
+    viewModel: WelcomeScreenViewModel = hiltViewModel(),
+) {
     val pages = listOf(
         OnBoardingPage.First,
         OnBoardingPage.Second,
@@ -77,7 +82,11 @@ fun WelcomeScreen(navController: NavHostController) {
             modifier = Modifier.weight(1F),
             isVisible = pagerState.currentPage == pages.size.minus(1),
         ) {
-
+            viewModel.setOnBoardingState(true)
+            navController.apply {
+                popBackStack()
+                navigate(Screen.Home.route)
+            }
         }
     }
 }

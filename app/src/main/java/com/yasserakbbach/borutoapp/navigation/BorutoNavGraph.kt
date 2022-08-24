@@ -1,19 +1,22 @@
 package com.yasserakbbach.borutoapp.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.google.accompanist.pager.ExperimentalPagerApi
+import com.yasserakbbach.borutoapp.presentation.screens.home.HomeScreen
 import com.yasserakbbach.borutoapp.presentation.screens.splash.SplashScreen
 import com.yasserakbbach.borutoapp.presentation.screens.welcome.WelcomeScreen
 
 @ExperimentalPagerApi
+@ExperimentalLifecycleComposeApi
 @Composable
 fun SetupBorutoNavGraph(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = Screen.Welcome.route) {
+    NavHost(navController = navController, startDestination = Screen.Splash.route) {
         composable(route = Screen.Splash.route) {
             SplashScreen(navController = navController)
         }
@@ -21,7 +24,7 @@ fun SetupBorutoNavGraph(navController: NavHostController) {
             WelcomeScreen(navController = navController)
         }
         composable(route = Screen.Home.route) {
-
+            HomeScreen()
         }
         composable(
             route = Screen.Details.route,
