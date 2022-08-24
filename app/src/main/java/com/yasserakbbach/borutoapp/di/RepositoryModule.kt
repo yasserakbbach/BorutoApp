@@ -1,7 +1,7 @@
 package com.yasserakbbach.borutoapp.di
 
 import android.content.Context
-import com.yasserakbbach.borutoapp.data.pref.DataStoreOperationsImpl
+import com.yasserakbbach.borutoapp.data.repository.DataStoreOperationsImpl
 import com.yasserakbbach.borutoapp.domain.repository.DataStoreOperations
 import dagger.Module
 import dagger.Provides
