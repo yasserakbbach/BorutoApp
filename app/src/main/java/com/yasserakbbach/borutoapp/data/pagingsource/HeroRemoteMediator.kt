@@ -6,6 +6,8 @@ import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
 import com.yasserakbbach.borutoapp.data.local.BorutoDatabase
+import com.yasserakbbach.borutoapp.data.local.dao.HeroDao
+import com.yasserakbbach.borutoapp.data.local.dao.HeroRemoteKeysDao
 import com.yasserakbbach.borutoapp.data.remote.BorutoApi
 import com.yasserakbbach.borutoapp.domain.model.Hero
 import com.yasserakbbach.borutoapp.domain.model.HeroApiResponse
@@ -19,8 +21,12 @@ class HeroRemoteMediator @Inject constructor(
     private val borutoDatabase: BorutoDatabase,
 ) : RemoteMediator<Int, Hero>() {
 
-    private val heroDao = borutoDatabase.heroDao()
-    private val heroRemoteKeysDao = borutoDatabase.heroRemoteKeysDao()
+    private val heroDao: HeroDao by lazy {
+        borutoDatabase.heroDao()
+    }
+    private val heroRemoteKeysDao: HeroRemoteKeysDao by lazy {
+        borutoDatabase.heroRemoteKeysDao()
+    }
 
     override suspend fun load(loadType: LoadType, state: PagingState<Int, Hero>): MediatorResult {
         return try {
