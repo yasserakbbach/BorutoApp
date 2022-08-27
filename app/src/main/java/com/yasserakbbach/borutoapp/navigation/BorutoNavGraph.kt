@@ -1,5 +1,6 @@
 package com.yasserakbbach.borutoapp.navigation
 
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.navigation.NavHostController
@@ -14,6 +15,7 @@ import com.yasserakbbach.borutoapp.presentation.screens.welcome.WelcomeScreen
 
 @ExperimentalPagerApi
 @ExperimentalLifecycleComposeApi
+@ExperimentalMaterial3Api
 @Composable
 fun SetupBorutoNavGraph(navController: NavHostController) {
     NavHost(navController = navController, startDestination = Screen.Splash.route) {

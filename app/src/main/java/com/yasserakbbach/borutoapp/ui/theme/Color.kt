@@ -44,3 +44,11 @@ val WelcomeScreenInActiveIndicatorColor
 val WelcomeScreenFinishButtonColor
     @Composable
     get() = if(isSystemInDarkTheme()) Purple700 else Purple500
+
+val TopAppBarContentColor
+    @Composable
+    get() = if(isSystemInDarkTheme()) LightGray else Color.White
+
+val TopAppBarBackgroundColor
+    @Composable
+    get() = if(isSystemInDarkTheme()) Color.Black else Purple500

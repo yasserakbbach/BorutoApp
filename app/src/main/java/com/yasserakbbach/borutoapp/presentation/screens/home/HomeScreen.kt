@@ -1,18 +1,25 @@
 package com.yasserakbbach.borutoapp.presentation.screens.home
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 
+@ExperimentalMaterial3Api
 @Composable
 fun HomeScreen() {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center,
+    Scaffold(
+        topBar = {
+            HomeTopBar {}
+        }
     ) {
-        Text(text = "Welcome to Home")
+
     }
+}
+
+@ExperimentalMaterial3Api
+@Preview
+@Composable
+fun PreviewHomeScreen() {
+    HomeScreen()
 }

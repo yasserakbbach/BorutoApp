@@ -8,4 +8,5 @@
     <string name="third_on_boarding_page_greetings">Power</string>
     <string name="third_on_boarding_page_description">Check out your hero\'s power and  see how much are they strong comparing to others.</string>
     <string name="welcome_screen_finish_button">Finish</string>
+    <string name="home_screen_search">Search</string>
 </resources>

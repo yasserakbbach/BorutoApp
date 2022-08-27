@@ -3,6 +3,7 @@ package com.yasserakbbach.borutoapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.pager.ExperimentalPagerApi
@@ -10,6 +11,7 @@ import com.yasserakbbach.borutoapp.navigation.SetupBorutoNavGraph
 import com.yasserakbbach.borutoapp.ui.theme.BorutoAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
+@ExperimentalMaterial3Api
 @ExperimentalPagerApi
 @ExperimentalLifecycleComposeApi
 @AndroidEntryPoint
