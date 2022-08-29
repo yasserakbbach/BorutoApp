@@ -90,7 +90,7 @@ dependencies {
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
 
     // Coil
-    implementation "io.coil-kt:coil-compose:2.1.0"
+    implementation "io.coil-kt:coil-compose:2.2.0"
 
     // Horizontal Pager and Indicators - Accompanist
     implementation "com.google.accompanist:accompanist-pager:$accompanist_version"

@@ -28,7 +28,7 @@ fun SetupBorutoNavGraph(navController: NavHostController) {
             WelcomeScreen(navController = navController)
         }
         composable(route = Screen.Home.route) {
-            HomeScreen()
+            HomeScreen(navController = navController)
         }
         composable(
             route = Screen.Details.route,

@@ -2,6 +2,7 @@ package com.yasserakbbach.borutoapp.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.yasserakbbach.borutoapp.util.Constants.BORUTO_BASE_URL
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -18,4 +19,10 @@ data class Hero(
     val family: List<String>,
     val abilities: List<String>,
     val natureTypes: List<String>,
-)
+) {
+    val imageUrl: String
+        get() = "$BORUTO_BASE_URL${image}"
+
+    val formattedRating: String
+        get() = "($rating)"
+}
