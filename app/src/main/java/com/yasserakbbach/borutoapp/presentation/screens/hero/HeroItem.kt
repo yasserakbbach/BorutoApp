@@ -50,7 +50,7 @@ fun HeroItem(
     ) {
         Surface(
             modifier = Modifier.fillMaxSize(),
-            shape = MaterialTheme.shapes.large,
+            shape = RoundedCornerShape(size = LARGE_PADDING),
         ) {
             AsyncImage(
                 model = hero.imageUrl,
@@ -62,7 +62,7 @@ fun HeroItem(
         }
         Surface(
             modifier = Modifier
-                .fillMaxHeight(.4F)
+                .fillMaxHeight(.45F)
                 .fillMaxWidth(),
             color = Color.Black.copy(alpha = ContentAlpha.medium),
             shape = RoundedCornerShape(
