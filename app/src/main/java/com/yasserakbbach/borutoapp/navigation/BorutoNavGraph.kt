@@ -8,11 +8,13 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import androidx.paging.ExperimentalPagingApi
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.yasserakbbach.borutoapp.presentation.screens.home.HomeScreen
 import com.yasserakbbach.borutoapp.presentation.screens.splash.SplashScreen
 import com.yasserakbbach.borutoapp.presentation.screens.welcome.WelcomeScreen
 
+@ExperimentalPagingApi
 @ExperimentalPagerApi
 @ExperimentalLifecycleComposeApi
 @ExperimentalMaterial3Api

@@ -20,6 +20,7 @@ val Teal200 = Color(0xFF03DAC5)
 val Black = Color(0XFF000000)
 val LightGray = Color(0xFFD8D8D8)
 val DarkGray = Color(0xFF2A2A2A)
+val StarColor = Color(0xFFFFC94D)
 
 val WelcomeScreenBackgroundColor
     @Composable
